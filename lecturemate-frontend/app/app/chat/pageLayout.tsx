@@ -220,7 +220,7 @@ const Chat = ({ user2 }: any) => {
   };
 
   const messageFormat = (messagesData: any[]) => {
-    const messagesWithQuestions = messagesData.map((message) => {
+    const messagesWithQuestions = messagesData?.map((message) => {
       if (message.role === "user") {
         const question = extractQuestion(message.content);
         return { ...message, content: question };
@@ -325,7 +325,7 @@ const Chat = ({ user2 }: any) => {
         if (error) {
           console.log(error);
         } else {
-          data.map((element: any) => arr.push(element));
+          data?.map((element: any) => arr.push(element));
           return arr;
         }
       } catch (error) {
@@ -335,7 +335,7 @@ const Chat = ({ user2 }: any) => {
 
     const pdfList: any = await listOfPdfs();
 
-    const uniqueArrayPdfList = pdfList.filter(
+    const uniqueArrayPdfList = pdfList?.filter(
       (value: any, index: any, self: any) => self.indexOf(value) === index
     );
     console.log(uniqueArrayPdfList);
@@ -523,7 +523,7 @@ const Chat = ({ user2 }: any) => {
         if (error) {
           console.log(error);
         } else {
-          data.map((element: any) => arr.push(element));
+          data?.map((element: any) => arr.push(element));
           return arr;
         }
       } catch (error) {
@@ -533,7 +533,7 @@ const Chat = ({ user2 }: any) => {
 
     const constantinePdfList: any = await constantinePdfs();
 
-    const constantineUniqueArrayPdfList = constantinePdfList.filter(
+    const constantineUniqueArrayPdfList = constantinePdfList?.filter(
       (value: any, index: any, self: any) => self.indexOf(value) === index
     );
     console.log(constantineUniqueArrayPdfList);
@@ -682,7 +682,7 @@ const Chat = ({ user2 }: any) => {
             console.log("Error deleting pdf " + error);
           } else {
             await handleClearChats(pdfName);
-            const updatedArrayPdfList = pdfList.filter(
+            const updatedArrayPdfList = pdfList?.filter(
               (pdfs, index) => index !== pdfListId
             );
             setPdfList(updatedArrayPdfList);
@@ -937,7 +937,7 @@ const Chat = ({ user2 }: any) => {
               }}
             >
               <Flex direction={"column"} px={5}>
-                {pdfList.map((pdf, index) => (
+                {pdfList?.map((pdf, index) => (
                   <Flex
                     key={index}
                     position={"relative"}
@@ -1029,7 +1029,7 @@ const Chat = ({ user2 }: any) => {
                   </Flex>
                 ))}
 
-                {constantinePdfList.map((pdf, index) => (
+                {constantinePdfList?.map((pdf, index) => (
                   <Flex
                     key={index}
                     h="50px"
@@ -1088,7 +1088,8 @@ const Chat = ({ user2 }: any) => {
           >
             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
               <Viewer
-                fileUrl={urlData}
+                fileUrl={"https://lnghkahgnqjwzdjbwtji.supabase.co/storage/v1/object/public/Pdfs/pdf.pdf"}
+                // urlData
                 defaultScale={1}
                 plugins={[
                   // Register plugins
@@ -1251,10 +1252,10 @@ const Chat = ({ user2 }: any) => {
               >
                 {" "}
                 {/* {requestsWithQuestions.map((request, index) => ( */}
-                {messages.length <= 0 ? (
+                {messages?.length <= 0 ? (
                   <></>
                 ) : (
-                  messages.map((message: any, index: any) => (
+                  messages?.map((message: any, index: any) => (
                     <Flex direction="column" key={index}>
                       <Box
                         bg="transparent"
@@ -1561,8 +1562,8 @@ const Chat = ({ user2 }: any) => {
                                   {...field}
                                   maxH={"60px"}
                                   minH="30px"
-                                  justifyItems="center"
-                                  pr="10"
+                                  // justifyItems="center"
+                                  pr="16"
                                   css={{
                                     "&:: -webkit-scrollbar": {
                                       display: "none",

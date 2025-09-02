@@ -513,7 +513,7 @@ export default function UserProfile({
                 display={"block"}
                 h={"35vh"}
               >
-                {pdfList.map(
+                {pdfList?.map(
                   (
                     pdf:
                       | string
@@ -596,7 +596,7 @@ export default function UserProfile({
                   )
                 )}
 
-                {constantinePdfList.map((pdf: any, index: any) => (
+                {constantinePdfList?.map((pdf: any, index: any) => (
                   <Flex
                     key={index}
                     h="50px"
