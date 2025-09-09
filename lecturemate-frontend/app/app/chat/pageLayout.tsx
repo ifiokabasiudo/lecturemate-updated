@@ -97,7 +97,7 @@ const Chat = ({ user2 }: any) => {
   const [fileId, setFileId] = useState<any>();
   const [url, setUrl] = useState(true);
   const [urlData, setUrlData] = useState(
-    "https://nixstswodrofwrvgoihr.supabase.co/storage/v1/object/public/pdfFiles/f37cefca-441b-43f3-b4b4-b2367eb8622a/The_Millionaire_Messenger_Make_a_Difference_and_a_Fortune_Sharing.pdf"
+    "https://lnghkahgnqjwzdjbwtji.supabase.co/storage/v1/object/public/Pdfs/Intro-pdf.pdf"
   );
   const [page, setPage] = useState(0);
 
@@ -570,7 +570,7 @@ const Chat = ({ user2 }: any) => {
       const fileName = localStorage.getItem("file");
 
       const retryResponse = await fetch(
-        "https://crazy-rose-leg-warmers.cyclic.app/api/api",
+        "http://localhost:4000/api/api",
         // "https://purple-chipmunk-tam.cyclic.app/api/api/",
         // "http://localhost:3000/api",
         {
@@ -713,7 +713,7 @@ const Chat = ({ user2 }: any) => {
     const fileName = localStorage.getItem("file");
 
     const response = await fetch(
-      "https://crazy-rose-leg-warmers.cyclic.app/api/api",
+      "http://localhost:4000/api/api",
       // "https://purple-chipmunk-tam.cyclic.app/api/api/",
       // "http://localhost:3000/api",
       {
@@ -1088,8 +1088,8 @@ const Chat = ({ user2 }: any) => {
           >
             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
               <Viewer
-                fileUrl={"https://lnghkahgnqjwzdjbwtji.supabase.co/storage/v1/object/public/Pdfs/pdf.pdf"}
-                // urlData
+                // fileUrl={"https://lnghkahgnqjwzdjbwtji.supabase.co/storage/v1/object/public/Pdfs/pdf.pdf"}
+                fileUrl={urlData}
                 defaultScale={1}
                 plugins={[
                   // Register plugins
@@ -1486,7 +1486,7 @@ const Chat = ({ user2 }: any) => {
                         const fileName = localStorage.getItem("file");
 
                         const response = await fetch(
-                          "https://crazy-rose-leg-warmers.cyclic.app/api/api",
+                          "http://localhost:4000/api/api",
                           // "https://purple-chipmunk-tam.cyclic.app/api/api/",
                           // "http://localhost:3000/api",
                           {

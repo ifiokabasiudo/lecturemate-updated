@@ -62,7 +62,7 @@ const FileUpload = ({
     "Initiating hyperdrive...",
     "Processing...",
   ];
-  const bucketName = "pdfFiles"; // Replace with your actual bucket name
+  const bucketName = "Pdfs"; // Replace with your actual bucket name
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -160,7 +160,8 @@ const FileUpload = ({
               const fileURL = data.publicUrl;
 
               const response = await axios.post(
-                "https://lm-backend.eastus.cloudapp.azure.com/api/upload",
+                // "https://lm-backend.eastus.cloudapp.azure.com/api/upload",
+                "http://localhost:5000/api/upload",
                 // "http://localhost:4000/api/upload/",
                 // "https://api.greynote.app/lecture/api/upload",
                 {
