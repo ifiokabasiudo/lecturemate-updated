@@ -44,7 +44,7 @@ lecturemate/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/lecturemate.git
+git clone https://github.com/ifiokabasiudo/lecturemate-updated.git
 cd lecturemate
 ```
 
