@@ -4,7 +4,7 @@ AI-powered study assistant that helps students upload lecture notes (PDFs), ask 
 Built with **Next.js, Supabase, Azure Functions, and OpenAI API**.
 
 > ⚠️ Note: The project relies on the OpenAI API, which is currently disabled due to cost.  
-> A full **demo video** of the app in action is available here: [📹 Watch Demo](YOUR_VIDEO_LINK)
+> A full **demo video** of the app in action is available here: [📹 Watch Demo](https://ifiok.vercel.app/Lecture_Mate.mp4)
 
 ---
 
