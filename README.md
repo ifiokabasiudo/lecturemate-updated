@@ -130,7 +130,7 @@ All backend, API, and AI logic were written and maintained by me.
 
 If you’d like to learn more or see the code walkthrough:
 
-GitHub: https://github.com/ifiokabasiud
+GitHub: https://github.com/ifiokabasiudo
 
 LinkedIn: https://www.linkedin.com/in/ifiokabasi-udo-7a896b216
 
